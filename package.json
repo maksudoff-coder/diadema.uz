@@ -1,0 +1,14 @@
+{
+  "name": "diadema-uz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Diadema — bridal salon & beauty studio by Dinara Nishanova, Fergana",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch",
+    "serve": "npx --yes serve . -l 3000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

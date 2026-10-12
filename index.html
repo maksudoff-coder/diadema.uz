@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="uz" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Diadema — Kelinlik ko'ylaklari va Beauty studiya | Farg'ona</title>
+  <meta name="description" content="Diadema — Farg'onadagi premium kelinlik saloni. Kelinlik ko'ylaklari ijarasi, soch turmagi, makiyaj va kelin obrazi paketlari. Asoschi: Dinara Nishanova." />
+  <meta name="theme-color" content="#FBF7F2" />
+  <link rel="canonical" href="https://diadema.uz/" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Diadema" />
+  <meta property="og:title" content="Diadema — Kelinlik saloni va Beauty studiya, Farg'ona" />
+  <meta property="og:description" content="Hashamatli kelinlik ko'ylaklari ijarasi va Dinara Nishanovadan professional beauty xizmatlari." />
+  <meta property="og:url" content="https://diadema.uz/" />
+  <meta property="og:locale" content="uz_UZ" />
+  <meta property="og:locale:alternate" content="ru_RU" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script>document.documentElement.classList.remove('no-js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Diadema",
+    "description": "Bridal salon & beauty studio: wedding dress rental, bridal hair and makeup.",
+    "url": "https://diadema.uz/",
+    "telephone": "+998900000000",
+    "founder": { "@type": "Person", "name": "Dinara Nishanova", "sameAs": "https://instagram.com/dinara_nishanovaa" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Fergana", "addressCountry": "UZ" },
+    "sameAs": ["https://instagram.com/diademauz.official", "https://instagram.com/dinara_nishanovaa"]
+  }
+  </script>
+</head>
+<body class="bg-grain">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-cocoa-900 focus:px-5 focus:py-3 focus:text-ivory" data-i18n="skip">Asosiy kontentga o'tish</a>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-500">
+    <div class="container-lux flex h-20 items-center justify-between gap-3 sm:gap-6">
+      <a href="#top" class="group flex min-w-0 items-center gap-2 sm:gap-3" aria-label="Diadema">
+        <svg class="h-6 w-11 shrink-0 text-champagne-500 sm:h-7 sm:w-14 transition group-hover:text-champagne-400" viewBox="0 0 64 30" fill="none" aria-hidden="true">
+          <path d="M6 24 L13 9 L21 19 L32 3 L43 19 L51 9 L58 24" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M5 27.5 Q32 20 59 27.5" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="13" cy="8" r="2" fill="currentColor"/><circle cx="32" cy="2.6" r="2.4" fill="currentColor"/><circle cx="51" cy="8" r="2" fill="currentColor"/>
+        </svg>
+        <span class="font-serif text-xl font-medium uppercase tracking-[0.2em] text-cocoa-900 sm:text-2xl sm:tracking-[0.32em]">Diadema</span>
+      </a>
+
+      <nav class="hidden items-center gap-9 lg:flex" aria-label="Asosiy menyu">
+        <a href="#about" class="nav-link" data-i18n="nav.about">Biz haqimizda</a>
+        <a href="#catalog" class="nav-link" data-i18n="nav.catalog">Katalog</a>
+        <a href="#beauty" class="nav-link" data-i18n="nav.beauty">Beauty</a>
+        <a href="#gallery" class="nav-link" data-i18n="nav.gallery">Galereya</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Aloqa</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="flex rounded-full border border-cocoa-900/10 bg-white/60 p-1 text-[11px] font-medium tracking-widest" role="group" aria-label="Til / Язык">
+          <button type="button" class="lang-btn rounded-full px-2.5 py-1.5 transition" data-lang="uz" aria-pressed="true">UZ</button>
+          <button type="button" class="lang-btn rounded-full px-2.5 py-1.5 transition" data-lang="ru" aria-pressed="false">RU</button>
+        </div>
+        <a href="#contact" class="btn-gold hidden !px-5 !py-2.5 sm:inline-flex" data-i18n="nav.book">Band qilish</a>
+        <button id="menuBtn" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-cocoa-900/10 bg-white/60 lg:hidden" aria-controls="mobileMenu" aria-expanded="false" aria-label="Menyu">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M10 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="pointer-events-none fixed inset-0 z-50 bg-ivory/95 opacity-0 backdrop-blur-xl transition duration-300 lg:hidden" aria-hidden="true">
+      <div class="container-lux flex h-20 items-center justify-end">
+        <button id="menuClose" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-cocoa-900/10 bg-white" aria-label="Yopish">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav class="container-lux mt-6 flex flex-col gap-6 font-serif text-4xl text-cocoa-900" aria-label="Mobil menyu">
+        <a href="#about" class="mobile-link" data-i18n="nav.about">Biz haqimizda</a>
+        <a href="#catalog" class="mobile-link" data-i18n="nav.catalog">Katalog</a>
+        <a href="#beauty" class="mobile-link" data-i18n="nav.beauty">Beauty</a>
+        <a href="#gallery" class="mobile-link" data-i18n="nav.gallery">Galereya</a>
+        <a href="#contact" class="mobile-link" data-i18n="nav.contact">Aloqa</a>
+      </nav>
+      <div class="container-lux mt-12 flex flex-col gap-3">
+        <a href="#contact" class="btn-gold mobile-link" data-i18n="nav.book">Band qilish</a>
+        <a href="tel:+998900000000" class="btn-ghost" data-link="phone"><span data-text="phone">+998 90 000 00 00</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="top" class="bg-silk relative overflow-hidden pb-20 pt-28 sm:pt-32 lg:pb-28 lg:pt-36">
+      <div class="container-lux grid items-center gap-14 lg:grid-cols-12">
+        <div class="relative z-10 lg:col-span-7">
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow">Bridal Salon &amp; Beauty Studio · Farg'ona</p>
+          <h1 class="reveal mt-6 text-balance font-serif text-[2.9rem] font-medium leading-[0.98] text-cocoa-900 sm:text-7xl lg:text-[5.6rem]" data-i18n="hero.title">
+            Orzuingizdagi <em class="shimmer font-normal italic">kelinlik</em> obrazi shu yerdan boshlanadi
+          </h1>
+          <p class="lead reveal" data-i18n="hero.lead">
+            Hashamatli kelinlik ko'ylaklari ijarasi va Dinara Nishanovadan professional soch turmagi hamda makiyaj — barchasi bir joyda, Farg'ona markazida.
+          </p>
+          <div class="reveal mt-10 flex flex-col gap-3 sm:flex-row">
+            <a href="#catalog" class="btn-gold">
+              <span data-i18n="hero.cta1">Katalog ko'rish</span>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#contact" class="btn-ghost" data-i18n="hero.cta2">Bog'lanish</a>
+          </div>
+
+          <dl class="reveal mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-cocoa-900/10 pt-8">
+            <div><dt class="sr-only" data-i18n="hero.s1">Ko'ylaklar</dt><dd class="font-serif text-4xl text-cocoa-900">150<span class="text-champagne-400">+</span></dd><dd class="mt-1 text-xs uppercase tracking-[0.16em] text-cocoa-400" data-i18n="hero.s1">Ko'ylaklar</dd></div>
+            <div><dt class="sr-only" data-i18n="hero.s2">Baxtli kelinlar</dt><dd class="font-serif text-4xl text-cocoa-900">2k<span class="text-champagne-400">+</span></dd><dd class="mt-1 text-xs uppercase tracking-[0.16em] text-cocoa-400" data-i18n="hero.s2">Baxtli kelinlar</dd></div>
+            <div><dt class="sr-only" data-i18n="hero.s3">Yillik tajriba</dt><dd class="font-serif text-4xl text-cocoa-900">8<span class="text-champagne-400">+</span></dd><dd class="mt-1 text-xs uppercase tracking-[0.16em] text-cocoa-400" data-i18n="hero.s3">Yillik tajriba</dd></div>
+          </dl>
+        </div>
+
+        <!-- Hero visual: drop a photo at assets/img/hero.jpg and it replaces the illustration -->
+        <div class="relative lg:col-span-5">
+          <div class="reveal relative mx-auto aspect-[3/4] w-full max-w-md">
+            <div class="absolute -inset-4 rounded-arch border border-champagne-300/60"></div>
+            <div class="ph h-full w-full rounded-arch bg-gradient-to-b from-blush-100 via-pearl to-champagne-100 shadow-soft">
+              <div class="absolute inset-0 grid place-items-center" data-art="ball" data-art-size="hero"></div>
+              <img src="assets/img/hero.jpg" alt="Diadema kelinlik ko'ylagi" fetchpriority="high" onerror="this.remove()" />
+            </div>
+            <div class="float-slow card absolute -left-4 bottom-10 flex items-center gap-3 px-5 py-4 sm:-left-10">
+              <span class="grid h-11 w-11 place-items-center rounded-full bg-champagne-100 text-champagne-500">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 6.9H22l-6 4.4 2.3 7L12 16l-6.3 4.3 2.3-7-6-4.4h7.6z"/></svg>
+              </span>
+              <div>
+                <p class="font-serif text-xl leading-none text-cocoa-900">4.9 / 5</p>
+                <p class="mt-1 text-[11px] uppercase tracking-[0.16em] text-cocoa-400" data-i18n="hero.rating">Kelinlar bahosi</p>
+              </div>
+            </div>
+            <div class="float-slow card absolute -right-2 top-12 px-5 py-4 [animation-delay:-4s] sm:-right-8">
+              <p class="eyebrow !text-[10px]" data-i18n="hero.newTag">Yangi kolleksiya</p>
+              <p class="mt-1 font-serif text-2xl italic text-cocoa-900">Lumière 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="overflow-hidden border-y border-champagne-200/70 bg-cocoa-900 py-4 text-champagne-200" aria-hidden="true">
+      <div class="marquee flex w-max gap-12 whitespace-nowrap font-serif text-xl italic">
+        <span>Wedding Dresses</span><span>✦</span><span>Bridal Makeup</span><span>✦</span><span>Hair Styling</span><span>✦</span><span>Прокат свадебных платьев</span><span>✦</span><span>Beauty услуги</span><span>✦</span><span>Kelinlik ko'ylaklari</span><span>✦</span>
+        <span>Wedding Dresses</span><span>✦</span><span>Bridal Makeup</span><span>✦</span><span>Hair Styling</span><span>✦</span><span>Прокат свадебных платьев</span><span>✦</span><span>Beauty услуги</span><span>✦</span><span>Kelinlik ko'ylaklari</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="relative py-24 lg:py-32">
+      <div class="container-lux grid items-center gap-16 lg:grid-cols-2">
+        <div class="reveal relative order-2 lg:order-1">
+          <div class="relative mx-auto max-w-md">
+            <!-- Portrait: drop a photo at assets/img/dinara.jpg -->
+            <div class="ph aspect-[4/5] rounded-[2rem] bg-gradient-to-br from-champagne-100 via-blush-100 to-pearl shadow-soft">
+              <div class="absolute inset-0 grid place-items-center">
+                <div class="text-center">
+                  <span class="block font-serif text-[7rem] italic leading-none text-champagne-300">DN</span>
+                  <span class="eyebrow mt-4 block" data-i18n="about.photo">Dinara Nishanova portreti</span>
+                </div>
+              </div>
+              <img src="assets/img/dinara.jpg" alt="Dinara Nishanova" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="card absolute -bottom-8 -right-2 max-w-[15rem] p-6 sm:-right-10">
+              <p class="font-serif text-lg italic leading-snug text-cocoa-900" data-i18n="about.quote">“Har bir kelin — o'z hikoyasining malikasi.”</p>
+              <p class="mt-3 text-xs uppercase tracking-[0.16em] text-champagne-500">— Dinara Nishanova</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <p class="eyebrow reveal" data-i18n="about.eyebrow">Asoschi haqida</p>
+          <h2 class="section-title reveal" data-i18n="about.title">Dinara Nishanova — <em>Diadema</em> ortidagi qalb</h2>
+          <p class="lead reveal" data-i18n="about.p1">
+            Dinara — Farg'onadagi kelinlar ishonadigan beauty-mutaxassis va stilist. Yillar davomida u yuzlab kelinlarga hayotining eng muhim kunida o'zini malikadek his qilishiga yordam bergan.
+          </p>
+          <p class="reveal mt-4 max-w-2xl leading-relaxed text-cocoa-500" data-i18n="about.p2">
+            Diadema — bu uning orzusi: kelin bir joyning o'zida ko'ylak tanlashi, primerka qilishi va to'liq obrazini — soch turmagidan makiyajgacha — tayyorlashi mumkin bo'lgan nafis makon. Biz har bir detalga, har bir kelinning xarakteriga e'tibor beramiz.
+          </p>
+
+          <ul class="reveal mt-10 grid gap-5 sm:grid-cols-3">
+            <li class="border-l border-champagne-300 pl-4">
+              <p class="font-serif text-xl text-cocoa-900" data-i18n="about.v1">Nafislik</p>
+              <p class="mt-1 text-sm text-cocoa-400" data-i18n="about.v1d">Saralangan Yevropa va Turkiya ko'ylaklari</p>
+            </li>
+            <li class="border-l border-champagne-300 pl-4">
+              <p class="font-serif text-xl text-cocoa-900" data-i18n="about.v2">G'amxo'rlik</p>
+              <p class="mt-1 text-sm text-cocoa-400" data-i18n="about.v2d">Shaxsiy stilist va moslashtirish</p>
+            </li>
+            <li class="border-l border-champagne-300 pl-4">
+              <p class="font-serif text-xl text-cocoa-900" data-i18n="about.v3">Mukammallik</p>
+              <p class="mt-1 text-sm text-cocoa-400" data-i18n="about.v3d">Kun bo'yi chidamli premium makiyaj</p>
+            </li>
+          </ul>
+
+          <a href="https://instagram.com/dinara_nishanovaa" target="_blank" rel="noopener" class="reveal mt-10 inline-flex items-center gap-3 text-sm uppercase tracking-[0.18em] text-cocoa-900 hover:text-champagne-500">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            @dinara_nishanovaa
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES OVERVIEW ============ -->
+    <section class="pb-8">
+      <div class="container-lux grid gap-6 md:grid-cols-2">
+        <a href="#catalog" class="reveal group card relative overflow-hidden p-8 sm:p-10">
+          <div class="absolute -right-10 -top-10 h-56 w-40 opacity-70 transition duration-700 group-hover:scale-105" data-art="aline"></div>
+          <p class="eyebrow">01</p>
+          <h3 class="mt-4 max-w-xs font-serif text-3xl sm:text-4xl" data-i18n="svc.dress">Kelinlik ko'ylaklari ijarasi</h3>
+          <p class="mt-2 font-serif italic text-champagne-500">Прокат свадебных платьев</p>
+          <p class="mt-5 max-w-sm text-cocoa-500" data-i18n="svc.dressD">A-siluet, malika, rusalka va minimalistik uslubdagi 150 dan ortiq model. Primerka va o'lchamga moslashtirish bepul.</p>
+          <span class="mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-cocoa-900 transition group-hover:gap-4" data-i18n="svc.more1">Katalogga o'tish →</span>
+        </a>
+        <a href="#beauty" class="reveal group card relative overflow-hidden p-8 sm:p-10">
+          <svg class="absolute -right-6 -top-6 h-48 w-48 text-blush-200 transition duration-700 group-hover:rotate-12" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="40"/><path d="M50 5v90M5 50h90M18 18l64 64M82 18L18 82"/></svg>
+          <p class="eyebrow">02</p>
+          <h3 class="mt-4 max-w-xs font-serif text-3xl sm:text-4xl" data-i18n="svc.beauty">Beauty xizmatlari</h3>
+          <p class="mt-2 font-serif italic text-champagne-500">Beauty услуги</p>
+          <p class="mt-5 max-w-sm text-cocoa-500" data-i18n="svc.beautyD">Kelin makiyaji, soch turmagi, nikoh va kechki obrazlar. Sinov obrazi (test-makiyaj) bilan to'liq ishonch.</p>
+          <span class="mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-cocoa-900 transition group-hover:gap-4" data-i18n="svc.more2">Xizmatlarni ko'rish →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CATALOG ============ -->
+    <section id="catalog" class="py-24 lg:py-32">
+      <div class="container-lux">
+        <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <div>
+            <p class="eyebrow reveal" data-i18n="cat.eyebrow">Kelinlik ko'ylaklari katalogi</p>
+            <h2 class="section-title reveal" data-i18n="cat.title">Sizning <em>ideal</em> ko'ylagingiz</h2>
+            <p class="lead reveal" data-i18n="cat.lead">Siluet va o'lcham bo'yicha saralang, yoqqan modelni tanlang — biz uni primerkaga tayyorlab qo'yamiz.</p>
+          </div>
+          <div class="reveal flex flex-wrap gap-3">
+            <label class="sr-only" for="sizeFilter" data-i18n="cat.size">O'lcham</label>
+            <select id="sizeFilter" class="field !w-auto !rounded-full !py-2.5 pr-10 text-sm">
+              <option value="all" data-i18n="cat.sizeAll">Barcha o'lchamlar</option>
+              <option value="XS">XS (40)</option>
+              <option value="S">S (42)</option>
+              <option value="M">M (44)</option>
+              <option value="L">L (46)</option>
+              <option value="XL">XL (48+)</option>
+            </select>
+            <label class="sr-only" for="sortSelect" data-i18n="cat.sort">Saralash</label>
+            <select id="sortSelect" class="field !w-auto !rounded-full !py-2.5 pr-10 text-sm">
+              <option value="new" data-i18n="cat.sortNew">Avval yangilari</option>
+              <option value="priceAsc" data-i18n="cat.sortAsc">Narx: arzonidan</option>
+              <option value="priceDesc" data-i18n="cat.sortDesc">Narx: qimmatidan</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="categoryChips" class="no-scrollbar reveal -mx-4 mt-10 flex gap-2 overflow-x-auto px-4 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Siluet"></div>
+
+        <div id="dressGrid" class="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-3 lg:grid-cols-4" aria-live="polite"></div>
+        <p id="emptyState" class="hidden py-16 text-center font-serif text-2xl italic text-cocoa-400" data-i18n="cat.empty">Bu filtr bo'yicha ko'ylak topilmadi. Boshqa o'lcham yoki siluetni tanlang.</p>
+
+        <div class="mt-14 text-center">
+          <button id="loadMore" type="button" class="btn-ghost" data-i18n="cat.more">Yana ko'rsatish</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="bg-cocoa-900 py-20 text-ivory lg:py-28">
+      <div class="container-lux">
+        <p class="eyebrow reveal !text-champagne-300" data-i18n="how.eyebrow">Ijara qanday ishlaydi</p>
+        <h2 class="section-title reveal !text-ivory" data-i18n="how.title">To'rt qadam — <em class="!text-champagne-300">orzu</em> ko'ylakkacha</h2>
+        <ol class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="reveal">
+            <span class="font-serif text-6xl italic text-champagne-300/80">01</span>
+            <h3 class="mt-4 font-serif text-2xl !text-ivory" data-i18n="how.s1">Tanlash</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ivory/60" data-i18n="how.s1d">Katalogdan yoqqan modellarni belgilang yoki stilistdan maslahat oling.</p>
+          </li>
+          <li class="reveal">
+            <span class="font-serif text-6xl italic text-champagne-300/80">02</span>
+            <h3 class="mt-4 font-serif text-2xl !text-ivory" data-i18n="how.s2">Primerka</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ivory/60" data-i18n="how.s2d">Salonimizda shoshilmasdan, onangiz va dugonalaringiz bilan kiyib ko'ring.</p>
+          </li>
+          <li class="reveal">
+            <span class="font-serif text-6xl italic text-champagne-300/80">03</span>
+            <h3 class="mt-4 font-serif text-2xl !text-ivory" data-i18n="how.s3">Band qilish</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ivory/60" data-i18n="how.s3d">Sanani bron qiling — ko'ylak faqat siz uchun moslashtiriladi va tozalanadi.</p>
+          </li>
+          <li class="reveal">
+            <span class="font-serif text-6xl italic text-champagne-300/80">04</span>
+            <h3 class="mt-4 font-serif text-2xl !text-ivory" data-i18n="how.s4">To'y kuni</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ivory/60" data-i18n="how.s4d">Ko'ylak, aksessuarlar va to'liq beauty obraz — siz faqat baxtdan zavqlanasiz.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ BEAUTY ============ -->
+    <section id="beauty" class="bg-silk py-24 lg:py-32">
+      <div class="container-lux">
+        <div class="text-center">
+          <p class="eyebrow reveal" data-i18n="beauty.eyebrow">Beauty studiya</p>
+          <h2 class="section-title reveal mx-auto max-w-3xl" data-i18n="beauty.title">Dinara qo'li bilan yaratilgan <em>mukammal</em> obraz</h2>
+          <p class="lead reveal mx-auto" data-i18n="beauty.lead">Premium kosmetika, kun bo'yi chidamli natija va har bir yuzga individual yondashuv.</p>
+        </div>
+
+        <div class="mt-16 grid gap-6 md:grid-cols-3">
+          <article class="reveal card p-8">
+            <span class="grid h-14 w-14 place-items-center rounded-full bg-blush-100 text-champagne-500">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14.5 3.5l6 6-9 9H5.5v-6z"/><path d="M12 6l6 6"/></svg>
+            </span>
+            <h3 class="mt-6 font-serif text-3xl" data-i18n="beauty.makeup">Makiyaj</h3>
+            <ul class="mt-5 space-y-3 text-[15px] text-cocoa-500">
+              <li class="flex justify-between gap-4 border-b border-cocoa-900/5 pb-3"><span data-i18n="beauty.m1">Kelin makiyaji</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.m1p">800 000 so'm</span></li>
+              <li class="flex justify-between gap-4 border-b border-cocoa-900/5 pb-3"><span data-i18n="beauty.m2">Kechki / mehmon makiyaji</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.m2p">350 000 so'm</span></li>
+              <li class="flex justify-between gap-4"><span data-i18n="beauty.m3">Test-makiyaj</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.m3p">300 000 so'm</span></li>
+            </ul>
+          </article>
+          <article class="reveal card p-8">
+            <span class="grid h-14 w-14 place-items-center rounded-full bg-blush-100 text-champagne-500">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 20c0-8 3-15 7-15s7 7 7 15"/><path d="M9 20c0-5 1.5-9 3-9s3 4 3 9"/></svg>
+            </span>
+            <h3 class="mt-6 font-serif text-3xl" data-i18n="beauty.hair">Soch turmagi</h3>
+            <ul class="mt-5 space-y-3 text-[15px] text-cocoa-500">
+              <li class="flex justify-between gap-4 border-b border-cocoa-900/5 pb-3"><span data-i18n="beauty.h1">Kelin turmagi</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.h1p">600 000 so'm</span></li>
+              <li class="flex justify-between gap-4 border-b border-cocoa-900/5 pb-3"><span data-i18n="beauty.h2">To'lqinlar / ukladka</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.h2p">250 000 so'm</span></li>
+              <li class="flex justify-between gap-4"><span data-i18n="beauty.h3">Fata va diadema o'rnatish</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.h3p">100 000 so'm</span></li>
+            </ul>
+          </article>
+          <article class="reveal card p-8">
+            <span class="grid h-14 w-14 place-items-center rounded-full bg-blush-100 text-champagne-500">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z"/></svg>
+            </span>
+            <h3 class="mt-6 font-serif text-3xl" data-i18n="beauty.extra">Qo'shimcha</h3>
+            <ul class="mt-5 space-y-3 text-[15px] text-cocoa-500">
+              <li class="flex justify-between gap-4 border-b border-cocoa-900/5 pb-3"><span data-i18n="beauty.e1">Qosh dizayni</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.e1p">150 000 so'm</span></li>
+              <li class="flex justify-between gap-4 border-b border-cocoa-900/5 pb-3"><span data-i18n="beauty.e2">Kiprik yopishtirish</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.e2p">100 000 so'm</span></li>
+              <li class="flex justify-between gap-4"><span data-i18n="beauty.e3">Uyga chiqish</span><span class="whitespace-nowrap font-medium text-cocoa-900" data-i18n="beauty.e3p">kelishiladi</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Packages -->
+        <div class="mt-24 text-center">
+          <p class="eyebrow reveal" data-i18n="pkg.eyebrow">Kelin obrazi paketlari</p>
+          <h3 class="reveal mt-3 font-serif text-4xl sm:text-5xl" data-i18n="pkg.title">Hammasi bitta paketda</h3>
+        </div>
+        <div class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
+          <article class="reveal card flex flex-col p-8 sm:p-10">
+            <p class="eyebrow" data-i18n="pkg.p1tag">Classic</p>
+            <h4 class="mt-3 font-serif text-3xl" data-i18n="pkg.p1">Nafis kelin</h4>
+            <p class="mt-6 font-serif text-4xl text-cocoa-900">1 300 000 <span class="text-base font-sans text-cocoa-400" data-i18n="pkg.cur">so'm</span></p>
+            <ul class="mt-8 flex-1 space-y-3 text-[15px] text-cocoa-500">
+              <li class="flex gap-3"><span class="text-champagne-400">✦</span><span data-i18n="pkg.f.makeup">Kelin makiyaji</span></li>
+              <li class="flex gap-3"><span class="text-champagne-400">✦</span><span data-i18n="pkg.f.hair">Kelin soch turmagi</span></li>
+              <li class="flex gap-3"><span class="text-champagne-400">✦</span><span data-i18n="pkg.f.lashes">Kipriklar</span></li>
+            </ul>
+            <a href="#contact" class="btn-ghost mt-10" data-pkg="Classic" data-i18n="pkg.cta">Paketni tanlash</a>
+          </article>
+          <article class="reveal relative flex flex-col overflow-hidden rounded-[1.75rem] bg-cocoa-900 p-8 text-ivory shadow-soft sm:p-10 lg:-my-4">
+            <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-champagne-400/20 blur-3xl"></div>
+            <p class="eyebrow !text-champagne-300" data-i18n="pkg.p2tag">Eng ommabop</p>
+            <h4 class="mt-3 font-serif text-3xl !text-ivory" data-i18n="pkg.p2">Diadema Royal</h4>
+            <p class="mt-6 font-serif text-4xl">4 500 000 <span class="text-base font-sans text-ivory/50" data-i18n="pkg.cur">so'm</span></p>
+            <ul class="mt-8 flex-1 space-y-3 text-[15px] text-ivory/75">
+              <li class="flex gap-3"><span class="text-champagne-300">✦</span><span data-i18n="pkg.f.dress">Premium ko'ylak ijarasi</span></li>
+              <li class="flex gap-3"><span class="text-champagne-300">✦</span><span data-i18n="pkg.f.makeupHair">Makiyaj + soch turmagi</span></li>
+              <li class="flex gap-3"><span class="text-champagne-300">✦</span><span data-i18n="pkg.f.test">Test-makiyaj</span></li>
+              <li class="flex gap-3"><span class="text-champagne-300">✦</span><span data-i18n="pkg.f.acc">Fata, diadema va aksessuarlar</span></li>
+            </ul>
+            <a href="#contact" class="btn-gold mt-10" data-pkg="Diadema Royal" data-i18n="pkg.cta">Paketni tanlash</a>
+          </article>
+          <article class="reveal card flex flex-col p-8 sm:p-10">
+            <p class="eyebrow" data-i18n="pkg.p3tag">Ikki obraz</p>
+            <h4 class="mt-3 font-serif text-3xl" data-i18n="pkg.p3">Nikoh + To'y</h4>
+            <p class="mt-6 font-serif text-4xl text-cocoa-900">2 000 000 <span class="text-base font-sans text-cocoa-400" data-i18n="pkg.cur">so'm</span></p>
+            <ul class="mt-8 flex-1 space-y-3 text-[15px] text-cocoa-500">
+              <li class="flex gap-3"><span class="text-champagne-400">✦</span><span data-i18n="pkg.f.two">Ikki xil makiyaj va turmak</span></li>
+              <li class="flex gap-3"><span class="text-champagne-400">✦</span><span data-i18n="pkg.f.touch">Obrazni almashtirish va tuzatish</span></li>
+              <li class="flex gap-3"><span class="text-champagne-400">✦</span><span data-i18n="pkg.f.lashes">Kipriklar</span></li>
+            </ul>
+            <a href="#contact" class="btn-ghost mt-10" data-pkg="Nikoh + To'y" data-i18n="pkg.cta">Paketni tanlash</a>
+          </article>
+        </div>
+        <p class="reveal mt-10 text-center text-sm text-cocoa-400" data-i18n="pkg.note">* Narxlar taxminiy. Aniq narx sana va tanlangan ko'ylakka qarab belgilanadi.</p>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section id="gallery" class="py-24 lg:py-32">
+      <div class="container-lux">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p class="eyebrow reveal" data-i18n="gal.eyebrow">Galereya</p>
+            <h2 class="section-title reveal" data-i18n="gal.title">Bizning <em>kelinlar</em></h2>
+          </div>
+          <a href="https://instagram.com/diademauz.official" target="_blank" rel="noopener" class="btn-ghost reveal self-start sm:self-auto">@diademauz.official</a>
+        </div>
+        <div id="galleryGrid" class="mt-12 columns-2 gap-4 sm:gap-6 lg:columns-4 [&>*]:mb-4 sm:[&>*]:mb-6"></div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <!-- NAMUNA: quyidagi fikrlarni haqiqiy mijozlar fikrlari bilan almashtiring / Replace with real client reviews -->
+    <section class="bg-pearl py-24 lg:py-32">
+      <div class="container-lux">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow reveal" data-i18n="rev.eyebrow">Fikrlar</p>
+            <h2 class="section-title reveal" data-i18n="rev.title">Kelinlar <em>nima</em> deydi</h2>
+          </div>
+          <div class="hidden gap-2 sm:flex">
+            <button type="button" class="rev-nav grid h-12 w-12 place-items-center rounded-full border border-cocoa-900/15 bg-white transition hover:border-champagne-400" data-dir="-1" aria-label="Oldingi">←</button>
+            <button type="button" class="rev-nav grid h-12 w-12 place-items-center rounded-full border border-cocoa-900/15 bg-white transition hover:border-champagne-400" data-dir="1" aria-label="Keyingi">→</button>
+          </div>
+        </div>
+
+        <div id="reviews" class="no-scrollbar -mx-4 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-4 pb-4 sm:mx-0 sm:px-0">
+          <figure class="card w-[85%] shrink-0 snap-start p-8 sm:w-[46%] lg:w-[31.5%]">
+            <div class="text-champagne-400" aria-label="5/5">★★★★★</div>
+            <blockquote class="mt-5 font-serif text-xl italic leading-relaxed text-cocoa-900" data-i18n="rev.1">“Ko'ylakni birinchi kiyganimdayoq yig'lab yubordim — xuddi men uchun tikilgandek edi. Dinara opaning makiyaji tun bo'yi buzilmadi!”</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-full bg-blush-100 font-serif text-lg text-champagne-500">M</span><span><span class="block font-medium text-cocoa-900">Madina</span><span class="text-xs uppercase tracking-[0.14em] text-cocoa-400" data-i18n="rev.city">Farg'ona</span></span></figcaption>
+          </figure>
+          <figure class="card w-[85%] shrink-0 snap-start p-8 sm:w-[46%] lg:w-[31.5%]">
+            <div class="text-champagne-400" aria-label="5/5">★★★★★</div>
+            <blockquote class="mt-5 font-serif text-xl italic leading-relaxed text-cocoa-900" data-i18n="rev.2">“Salonda juda shinam muhit. Onam bilan uch soat ko'ylak tanladik, hech kim shoshirmadi. Royal paketni tavsiya qilaman.”</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-full bg-blush-100 font-serif text-lg text-champagne-500">S</span><span><span class="block font-medium text-cocoa-900">Sevara</span><span class="text-xs uppercase tracking-[0.14em] text-cocoa-400" data-i18n="rev.city2">Marg'ilon</span></span></figcaption>
+          </figure>
+          <figure class="card w-[85%] shrink-0 snap-start p-8 sm:w-[46%] lg:w-[31.5%]">
+            <div class="text-champagne-400" aria-label="5/5">★★★★★</div>
+            <blockquote class="mt-5 font-serif text-xl italic leading-relaxed text-cocoa-900" data-i18n="rev.3">“Nikoh va to'y uchun ikki xil obraz qilishdi — ikkalasi ham ajoyib. Hamma rasmlarda o'zimni malikadek ko'raman.”</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-full bg-blush-100 font-serif text-lg text-champagne-500">D</span><span><span class="block font-medium text-cocoa-900">Dilnoza</span><span class="text-xs uppercase tracking-[0.14em] text-cocoa-400" data-i18n="rev.city3">Qo'qon</span></span></figcaption>
+          </figure>
+          <figure class="card w-[85%] shrink-0 snap-start p-8 sm:w-[46%] lg:w-[31.5%]">
+            <div class="text-champagne-400" aria-label="5/5">★★★★★</div>
+            <blockquote class="mt-5 font-serif text-xl italic leading-relaxed text-cocoa-900" data-i18n="rev.4">“Ko'ylak toza, dazmollangan va o'lchamimga moslab berildi. Narxi ham sifatiga nisbatan juda munosib.”</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-11 w-11 place-items-center rounded-full bg-blush-100 font-serif text-lg text-champagne-500">N</span><span><span class="block font-medium text-cocoa-900">Nilufar</span><span class="text-xs uppercase tracking-[0.14em] text-cocoa-400" data-i18n="rev.city">Farg'ona</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-24 lg:py-28">
+      <div class="container-lux grid gap-12 lg:grid-cols-3">
+        <div>
+          <p class="eyebrow reveal" data-i18n="faq.eyebrow">Savollar</p>
+          <h2 class="section-title reveal" data-i18n="faq.title">Ko'p beriladigan <em>savollar</em></h2>
+        </div>
+        <div class="space-y-3 lg:col-span-2">
+          <details class="reveal card group p-6 sm:p-7">
+            <summary class="flex items-center justify-between gap-6 font-serif text-xl text-cocoa-900 sm:text-2xl"><span data-i18n="faq.q1">Ko'ylakni qancha oldin band qilish kerak?</span><span class="faq-icon text-2xl text-champagne-400 transition">+</span></summary>
+            <p class="mt-4 leading-relaxed text-cocoa-500" data-i18n="faq.a1">To'y mavsumida (aprel–oktyabr) 1–2 oy oldin band qilishni tavsiya qilamiz. Boshqa vaqtlarda 2–3 hafta yetarli.</p>
+          </details>
+          <details class="reveal card group p-6 sm:p-7">
+            <summary class="flex items-center justify-between gap-6 font-serif text-xl text-cocoa-900 sm:text-2xl"><span data-i18n="faq.q2">Primerka pullikmi?</span><span class="faq-icon text-2xl text-champagne-400 transition">+</span></summary>
+            <p class="mt-4 leading-relaxed text-cocoa-500" data-i18n="faq.a2">Yo'q, primerka bepul. Faqat oldindan vaqt belgilab qo'yishingizni so'raymiz, shunda stilist faqat siz bilan shug'ullanadi.</p>
+          </details>
+          <details class="reveal card group p-6 sm:p-7">
+            <summary class="flex items-center justify-between gap-6 font-serif text-xl text-cocoa-900 sm:text-2xl"><span data-i18n="faq.q3">Ijara narxiga nimalar kiradi?</span><span class="faq-icon text-2xl text-champagne-400 transition">+</span></summary>
+            <p class="mt-4 leading-relaxed text-cocoa-500" data-i18n="faq.a3">Ko'ylak, yubka ostidagi karkas (podyubnik), o'lchamga moslashtirish va kimyoviy tozalash. Fata va aksessuarlar paketga qarab qo'shiladi.</p>
+          </details>
+          <details class="reveal card group p-6 sm:p-7">
+            <summary class="flex items-center justify-between gap-6 font-serif text-xl text-cocoa-900 sm:text-2xl"><span data-i18n="faq.q4">Makiyaj uchun uyga chiqasizlarmi?</span><span class="faq-icon text-2xl text-champagne-400 transition">+</span></summary>
+            <p class="mt-4 leading-relaxed text-cocoa-500" data-i18n="faq.a4">Ha, Farg'ona va viloyat bo'ylab chiqish xizmati mavjud. Narx manzil va vaqtga qarab kelishiladi.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="bg-silk py-24 lg:py-32">
+      <div class="container-lux grid gap-10 lg:grid-cols-2">
+        <div>
+          <p class="eyebrow reveal" data-i18n="ct.eyebrow">Aloqa va band qilish</p>
+          <h2 class="section-title reveal" data-i18n="ct.title">Primerkaga <em>yoziling</em></h2>
+          <p class="lead reveal" data-i18n="ct.lead">Formani to'ldiring — xabaringiz to'g'ridan-to'g'ri Telegram yoki WhatsApp orqali bizga yetib boradi. Biz 15 daqiqa ichida javob beramiz.</p>
+
+          <form id="bookingForm" class="reveal card mt-10 grid gap-5 p-6 sm:grid-cols-2 sm:p-8" novalidate>
+            <div class="sm:col-span-1">
+              <label for="fName" class="label" data-i18n="f.name">Ismingiz</label>
+              <input id="fName" name="name" type="text" class="field" autocomplete="name" required data-i18n-ph="f.namePh" placeholder="Masalan, Madina" />
+            </div>
+            <div class="sm:col-span-1">
+              <label for="fPhone" class="label" data-i18n="f.phone">Telefon</label>
+              <input id="fPhone" name="phone" type="tel" class="field" autocomplete="tel" inputmode="tel" required placeholder="+998 __ ___ __ __" />
+            </div>
+            <div>
+              <label for="fDate" class="label" data-i18n="f.date">To'y sanasi</label>
+              <input id="fDate" name="date" type="date" class="field" />
+            </div>
+            <div>
+              <label for="fService" class="label" data-i18n="f.service">Xizmat</label>
+              <select id="fService" name="service" class="field">
+                <option value="dress" data-i18n="f.s1">Ko'ylak primerkasi</option>
+                <option value="beauty" data-i18n="f.s2">Makiyaj va soch turmagi</option>
+                <option value="package" data-i18n="f.s3">Kelin paketi</option>
+                <option value="other" data-i18n="f.s4">Boshqa savol</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="fMsg" class="label" data-i18n="f.msg">Izoh</label>
+              <textarea id="fMsg" name="message" rows="3" class="field resize-none" data-i18n-ph="f.msgPh" placeholder="Qaysi ko'ylak yoki paket sizni qiziqtiradi?"></textarea>
+            </div>
+            <p id="formError" class="hidden text-sm text-red-700 sm:col-span-2" role="alert" data-i18n="f.err">Iltimos, ism va telefon raqamingizni kiriting.</p>
+            <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row">
+              <button type="submit" value="telegram" class="btn-gold flex-1">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3L18.7 19.5c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.2-8.3c.4-.4-.1-.6-.6-.2L6.2 13.2l-4.9-1.5c-1-.3-1.1-1 .2-1.6L20.6 2.8c.9-.3 1.6.2 1.3 1.5z"/></svg>
+                <span data-i18n="f.tg">Telegram orqali</span>
+              </button>
+              <button type="submit" value="whatsapp" class="btn-ghost flex-1">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+                <span data-i18n="f.wa">WhatsApp orqali</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <!-- Map: replace the query with the salon's exact address or a Google Maps "Embed a map" URL -->
+          <div class="reveal card overflow-hidden p-2">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-[1.4rem] bg-pearl sm:aspect-[16/11]">
+              <div class="absolute inset-0 grid place-items-center text-center" aria-hidden="true">
+                <div><svg class="mx-auto h-10 w-10 text-champagne-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                <p class="mt-3 font-serif text-2xl text-cocoa-900">Diadema · Farg'ona</p></div>
+              </div>
+              <iframe
+                title="Diadema — Farg'ona xaritada"
+                src="https://www.google.com/maps?q=Fergana,+Uzbekistan&z=14&output=embed"
+                class="absolute inset-0 h-full w-full grayscale-[35%] sepia-[15%]"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="reveal grid gap-4 sm:grid-cols-2">
+            <a href="tel:+998900000000" data-link="phone" class="card group p-6 transition hover:-translate-y-1">
+              <p class="eyebrow" data-i18n="ct.phone">Telefon</p>
+              <p class="mt-2 font-serif text-2xl text-cocoa-900" data-text="phone">+998 90 000 00 00</p>
+            </a>
+            <a href="https://t.me/diademauz" data-link="telegram" target="_blank" rel="noopener" class="card group p-6 transition hover:-translate-y-1">
+              <p class="eyebrow">Telegram</p>
+              <p class="mt-2 font-serif text-2xl text-cocoa-900" data-text="telegram">@diademauz</p>
+            </a>
+            <a href="https://instagram.com/diademauz.official" target="_blank" rel="noopener" class="card group p-6 transition hover:-translate-y-1">
+              <p class="eyebrow" data-i18n="ct.igSalon">Instagram · Salon</p>
+              <p class="mt-2 font-serif text-2xl text-cocoa-900">@diademauz.official</p>
+            </a>
+            <a href="https://instagram.com/dinara_nishanovaa" target="_blank" rel="noopener" class="card group p-6 transition hover:-translate-y-1">
+              <p class="eyebrow" data-i18n="ct.igDinara">Instagram · Dinara</p>
+              <p class="mt-2 font-serif text-2xl text-cocoa-900">@dinara_nishanovaa</p>
+            </a>
+          </div>
+          <div class="reveal card flex flex-col gap-1 p-6 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="eyebrow" data-i18n="ct.addr">Manzil</p>
+              <p class="mt-2 text-cocoa-900" data-i18n="ct.addrV">Farg'ona shahri, O'zbekiston</p>
+            </div>
+            <div class="mt-3 sm:mt-0 sm:text-right">
+              <p class="eyebrow" data-i18n="ct.hours">Ish vaqti</p>
+              <p class="mt-2 text-cocoa-900" data-i18n="ct.hoursV">Har kuni · 09:00 – 20:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-cocoa-900 pb-28 pt-20 text-ivory/70 sm:pb-12">
+    <div class="container-lux">
+      <div class="grid gap-12 md:grid-cols-12">
+        <div class="md:col-span-5">
+          <p class="font-serif text-4xl uppercase tracking-[0.3em] text-ivory">Diadema</p>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed" data-i18n="ft.about">Farg'onadagi kelinlik saloni va beauty studiya. Kelinlik ko'ylaklari ijarasi, makiyaj va soch turmagi — Dinara Nishanova.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="https://instagram.com/diademauz.official" target="_blank" rel="noopener" aria-label="Instagram @diademauz.official" class="grid h-11 w-11 place-items-center rounded-full border border-ivory/15 transition hover:border-champagne-300 hover:text-champagne-300"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="https://t.me/diademauz" data-link="telegram" target="_blank" rel="noopener" aria-label="Telegram" class="grid h-11 w-11 place-items-center rounded-full border border-ivory/15 transition hover:border-champagne-300 hover:text-champagne-300"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3L18.7 19.5c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.2-8.3c.4-.4-.1-.6-.6-.2L6.2 13.2l-4.9-1.5c-1-.3-1.1-1 .2-1.6L20.6 2.8c.9-.3 1.6.2 1.3 1.5z"/></svg></a>
+            <a href="tel:+998900000000" data-link="phone" aria-label="Telefon" class="grid h-11 w-11 place-items-center rounded-full border border-ivory/15 transition hover:border-champagne-300 hover:text-champagne-300"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></a>
+          </div>
+        </div>
+        <div class="md:col-span-3">
+          <p class="eyebrow !text-champagne-300" data-i18n="ft.menu">Menyu</p>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="#about" class="hover:text-champagne-300" data-i18n="nav.about">Biz haqimizda</a></li>
+            <li><a href="#catalog" class="hover:text-champagne-300" data-i18n="nav.catalog">Katalog</a></li>
+            <li><a href="#beauty" class="hover:text-champagne-300" data-i18n="nav.beauty">Beauty</a></li>
+            <li><a href="#gallery" class="hover:text-champagne-300" data-i18n="nav.gallery">Galereya</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-4">
+          <p class="eyebrow !text-champagne-300" data-i18n="ft.contact">Aloqa</p>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="tel:+998900000000" data-link="phone" class="hover:text-champagne-300" data-text="phone">+998 90 000 00 00</a></li>
+            <li><a href="https://instagram.com/diademauz.official" target="_blank" rel="noopener" class="hover:text-champagne-300">@diademauz.official</a></li>
+            <li><a href="https://instagram.com/dinara_nishanovaa" target="_blank" rel="noopener" class="hover:text-champagne-300">@dinara_nishanovaa</a></li>
+            <li data-i18n="ct.addrV">Farg'ona shahri, O'zbekiston</li>
+          </ul>
+        </div>
+      </div>
+      <div class="gold-line my-10 opacity-30"></div>
+      <div class="flex flex-col justify-between gap-3 text-xs uppercase tracking-[0.16em] text-ivory/40 sm:flex-row">
+        <p>© <span id="year">2026</span> Diadema · Farg'ona</p>
+        <p data-i18n="ft.rights">Barcha huquqlar himoyalangan</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <div class="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-cocoa-900/5 bg-ivory/90 p-3 backdrop-blur-lg sm:hidden" style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom));">
+    <a href="tel:+998900000000" data-link="phone" class="btn-ghost flex-1 !px-3" data-i18n="m.call">Qo'ng'iroq</a>
+    <a href="#contact" class="btn-gold flex-[1.4] !px-3" data-i18n="nav.book">Band qilish</a>
+  </div>
+
+  <!-- Dress modal -->
+  <dialog id="dressModal" class="m-auto w-[min(64rem,calc(100%-2rem))] max-h-[calc(100dvh-2rem)] overflow-y-auto rounded-[2rem] bg-ivory p-0 text-cocoa-700 shadow-2xl">
+    <div class="grid md:grid-cols-2">
+      <div id="modalMedia" class="ph aspect-[3/4] md:aspect-auto md:min-h-[34rem]"></div>
+      <div class="relative p-7 sm:p-10">
+        <button type="button" class="modal-close absolute right-5 top-5 grid h-10 w-10 place-items-center rounded-full border border-cocoa-900/10 bg-white" aria-label="Yopish">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+        <p id="modalCat" class="eyebrow"></p>
+        <h3 id="modalName" class="mt-3 font-serif text-5xl"></h3>
+        <p id="modalPrice" class="mt-4 font-serif text-2xl text-champagne-500"></p>
+        <p id="modalDesc" class="mt-6 leading-relaxed text-cocoa-500"></p>
+        <dl class="mt-8 grid grid-cols-2 gap-5 border-t border-cocoa-900/10 pt-6 text-sm">
+          <div><dt class="label" data-i18n="md.color">Rang</dt><dd id="modalColor" class="text-cocoa-900"></dd></div>
+          <div><dt class="label" data-i18n="md.fabric">Mato</dt><dd id="modalFabric" class="text-cocoa-900"></dd></div>
+          <div class="col-span-2"><dt class="label" data-i18n="md.sizes">O'lchamlar</dt><dd id="modalSizes" class="flex flex-wrap gap-2"></dd></div>
+        </dl>
+        <button id="modalBook" type="button" class="btn-gold mt-10 w-full" data-i18n="md.book">Primerkaga yozilish</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Lightbox -->
+  <dialog id="lightbox" class="m-auto w-[min(56rem,calc(100%-2rem))] overflow-hidden rounded-[1.5rem] bg-cocoa-900 p-0">
+    <div id="lightboxMedia" class="ph aspect-[4/5] sm:aspect-[4/3]"></div>
+    <button type="button" class="modal-close absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/90" aria-label="Yopish">
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </dialog>
+
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
