@@ -8,7 +8,9 @@
     "dev": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch",
     "serve": "npx --yes serve . -l 3000",
     "build:cinematic": "tailwindcss -c cinematic/tailwind.config.js -i cinematic/src/app.css -o cinematic/assets/app.css --minify && esbuild cinematic/src/main.js --bundle --minify --format=esm --target=es2020 --outfile=cinematic/assets/app.js",
-    "serve:cinematic": "python3 -m http.server 4173"
+    "serve:cinematic": "python3 -m http.server 4173",
+    "build:all": "npm run build && npm run build:cinematic",
+    "dist": "node scripts/dist.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.24.0",
