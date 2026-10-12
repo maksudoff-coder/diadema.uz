@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Diadema — Cinematic Showroom | Farg'ona</title>
+  <meta name="description" content="Diadema virtual showroom — kelinlik ko'ylaklari va beauty studiya, Dinara Nishanova, Farg'ona. 3D kolleksiya, ko'ylak konstruktori va VIP band qilish." />
+  <meta name="theme-color" content="#0e0a09" />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" href="assets/app.css" />
+</head>
+<body>
+  <!-- WebGL showroom (fixed, behind everything) -->
+  <canvas id="webgl" class="fixed inset-0 z-0 h-[100lvh] w-full" aria-hidden="true"></canvas>
+  <div class="fallback-bg fixed inset-0 z-0" aria-hidden="true"></div>
+
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 z-[90] grid place-items-center bg-night transition-opacity duration-1000" role="status" aria-live="polite">
+    <div class="text-center">
+      <svg class="mx-auto h-10 w-20 text-gold" viewBox="0 0 64 30" fill="none" aria-hidden="true">
+        <path class="draw" d="M6 24 L13 9 L21 19 L32 3 L43 19 L51 9 L58 24" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        <path class="draw" d="M5 27.5 Q32 20 59 27.5" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <p class="mt-6 font-serif text-3xl uppercase tracking-[0.5em] text-ivory">Diadema</p>
+      <div class="mx-auto mt-6 h-px w-40 overflow-hidden bg-white/10"><div id="loaderBar" class="h-full w-0 bg-gold transition-[width] duration-500"></div></div>
+      <p class="mt-4 text-[10px] uppercase tracking-[0.4em] text-ivory/40">Showroom ochilmoqda</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
+    <div class="glass mx-auto flex max-w-6xl items-center justify-between rounded-full py-2.5 pl-5 pr-2.5">
+      <a href="#hero" class="flex items-center gap-2.5" aria-label="Diadema">
+        <svg class="h-5 w-10 text-gold" viewBox="0 0 64 30" fill="none" aria-hidden="true"><path d="M6 24 L13 9 L21 19 L32 3 L43 19 L51 9 L58 24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M5 27.5 Q32 20 59 27.5" stroke="currentColor" stroke-width="2"/></svg>
+        <span class="font-serif text-lg uppercase tracking-[0.35em] text-ivory">Diadema</span>
+      </a>
+      <nav class="hidden items-center gap-8 md:flex" aria-label="Menyu">
+        <a href="#collection" class="nav-a">Kolleksiya</a>
+        <a href="#founder" class="nav-a">Dinara</a>
+        <a href="#atelier" class="nav-a">Konstruktor</a>
+        <a href="#vip" class="nav-a">VIP</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="#vip" class="btn-gold !px-5 !py-2.5 text-[11px]">Band qilish</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Scroll progress -->
+  <div class="fixed bottom-6 left-1/2 z-40 hidden -translate-x-1/2 items-center gap-3 md:flex" aria-hidden="true">
+    <span id="chapter" class="min-w-[9rem] text-right text-[10px] uppercase tracking-[0.35em] text-ivory/60">Kirish</span>
+    <div class="h-px w-40 bg-white/15"><div id="progress" class="h-full origin-left scale-x-0 bg-gold"></div></div>
+  </div>
+
+  <main id="main" class="relative z-10">
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="panel relative flex min-h-[100svh] items-end pb-20 sm:items-center sm:pb-0" data-k="0" data-chapter="Kirish">
+      <div class="container-c">
+        <div class="max-w-3xl">
+          <p class="eyebrow hero-line">Bridal Salon &amp; Beauty Studio · Farg'ona</p>
+          <h1 class="hero-line mt-6 font-serif text-[3.4rem] font-light leading-[0.92] text-ivory sm:text-8xl lg:text-[8.5rem]">
+            Kelinlik<br /><em class="gold-text font-light">afsonasi</em>
+          </h1>
+          <p class="hero-line mt-7 max-w-xl text-base leading-relaxed text-ivory/70 sm:text-lg">
+            Dinara Nishanova virtual showroomiga xush kelibsiz. Hashamatli ko'ylaklar ijarasi va professional beauty xizmatlari — kinematik sayohatda.
+            <span class="mt-2 block font-serif text-lg italic text-gold/80">Прокат свадебных платьев · Beauty услуги</span>
+          </p>
+          <div class="hero-line mt-10 flex flex-col gap-3 sm:flex-row">
+            <a href="#collection" class="btn-gold">Katalog ko'rish</a>
+            <a href="#vip" class="btn-glass">Bog'lanish</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint absolute bottom-8 right-6 flex flex-col items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-ivory/50 sm:right-10">
+        <span class="[writing-mode:vertical-rl]">Scroll</span>
+        <span class="block h-14 w-px overflow-hidden bg-white/15"><span class="block h-1/2 w-full animate-[drip_2s_ease-in-out_infinite] bg-gold"></span></span>
+      </div>
+    </section>
+
+    <!-- ===== COLLECTION ===== -->
+    <section id="collection" aria-label="Kolleksiya">
+      <div class="panel flex min-h-[110svh] items-center" data-k="1" data-chapter="Showroom">
+        <div class="container-c text-center">
+          <p class="eyebrow reveal">Lumière kolleksiyasi · 2026</p>
+          <h2 class="reveal mx-auto mt-5 max-w-4xl font-serif text-5xl font-light leading-[0.95] text-ivory sm:text-7xl">Oltin arklar ortida — <em class="gold-text">150+</em> ko'ylak</h2>
+          <p class="reveal mx-auto mt-6 max-w-lg text-ivory/60">Har bir ko'ylak Yevropa va Turkiya ateliyelaridan saralangan. Primerka va moslashtirish — bepul.</p>
+        </div>
+      </div>
+
+      <div class="panel flex min-h-[120svh] items-end pb-[14svh] sm:items-center sm:pb-0" data-k="2" data-chapter="Malika">
+        <div class="container-c flex justify-end">
+          <article class="glass gown-card reveal">
+            <p class="eyebrow">01 · Malika siluet</p>
+            <h3 class="gown-title">Lumière</h3>
+            <p class="gown-text">Ko'p qavatli atlas, korset va uzun shleyf. Saroy uslubidagi to'y uchun.</p>
+            <dl class="gown-meta"><div><dt>Mato</dt><dd>Atlas</dd></div><div><dt>Rang</dt><dd>Ivory</dd></div><div><dt>Ijara</dt><dd>3.5 mln</dd></div></dl>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel flex min-h-[120svh] items-end pb-[14svh] sm:items-center sm:pb-0" data-k="3" data-chapter="Rusalka">
+        <div class="container-c flex justify-start">
+          <article class="glass gown-card reveal">
+            <p class="eyebrow">02 · Rusalka</p>
+            <h3 class="gown-title">Seraphina</h3>
+            <p class="gown-text">Qomatni ta'kidlovchi siluet va qo'lda tikilgan fransuz kruzhevasi.</p>
+            <dl class="gown-meta"><div><dt>Mato</dt><dd>Kruzheva</dd></div><div><dt>Rang</dt><dd>Shampan</dd></div><div><dt>Ijara</dt><dd>2.8 mln</dd></div></dl>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel flex min-h-[120svh] items-end pb-[14svh] sm:items-center sm:pb-0" data-k="4" data-chapter="A-siluet">
+        <div class="container-c flex justify-end">
+          <article class="glass gown-card reveal">
+            <p class="eyebrow">03 · A-siluet</p>
+            <h3 class="gown-title">Aurora</h3>
+            <p class="gown-text">Bulutdek yengil tyul, pudra rangi — romantik kelin uchun.</p>
+            <dl class="gown-meta"><div><dt>Mato</dt><dd>Tyul</dd></div><div><dt>Rang</dt><dd>Pudra</dd></div><div><dt>Ijara</dt><dd>2.2 mln</dd></div></dl>
+          </article>
+        </div>
+      </div>
+
+      <div class="panel flex min-h-[120svh] items-end pb-[14svh] sm:items-center sm:pb-0" data-k="5" data-chapter="Minimalizm">
+        <div class="container-c flex justify-start">
+          <article class="glass gown-card reveal">
+            <p class="eyebrow">04 · Minimalizm</p>
+            <h3 class="gown-title">Margaux</h3>
+            <p class="gown-text">Mikado matosidan toza chiziqlar — ZAGS va zamonaviy marosimlar uchun.</p>
+            <dl class="gown-meta"><div><dt>Mato</dt><dd>Mikado</dd></div><div><dt>Rang</dt><dd>Marvarid</dd></div><div><dt>Ijara</dt><dd>1.8 mln</dd></div></dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOUNDER ===== -->
+    <section id="founder" class="panel flex min-h-[150svh] items-center" data-k="6" data-chapter="Asoschi">
+      <div class="container-c flex justify-end">
+        <article class="glass reveal w-full max-w-xl rounded-[2rem] p-7 sm:p-10">
+          <p class="eyebrow">Asoschi · Founder Story</p>
+          <h2 class="mt-4 font-serif text-5xl font-light leading-none text-ivory sm:text-6xl">Dinara<br /><em class="gold-text">Nishanova</em></h2>
+          <p class="mt-6 leading-relaxed text-ivory/70">Farg'onadagi kelinlar ishonadigan beauty-mutaxassis va stilist. Diadema — uning orzusi: kelin bir joyning o'zida ko'ylak tanlab, primerka qilib, soch turmagidan makiyajgacha to'liq obrazini yaratadigan makon.</p>
+          <blockquote class="mt-6 border-l border-gold/50 pl-5 font-serif text-2xl italic leading-snug text-ivory/90">“Har bir kelin — o'z hikoyasining malikasi.”</blockquote>
+          <dl class="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+            <div><dd class="font-serif text-4xl text-ivory"><span class="count" data-to="150">0</span><span class="text-gold">+</span></dd><dt class="mt-1 text-[10px] uppercase tracking-[0.25em] text-ivory/50">Ko'ylak</dt></div>
+            <div><dd class="font-serif text-4xl text-ivory"><span class="count" data-to="2000">0</span><span class="text-gold">+</span></dd><dt class="mt-1 text-[10px] uppercase tracking-[0.25em] text-ivory/50">Kelinlar</dt></div>
+            <div><dd class="font-serif text-4xl text-ivory"><span class="count" data-to="8">0</span><span class="text-gold">+</span></dd><dt class="mt-1 text-[10px] uppercase tracking-[0.25em] text-ivory/50">Yil</dt></div>
+          </dl>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://instagram.com/dinara_nishanovaa" target="_blank" rel="noopener" class="btn-glass !py-3 text-[11px]">@dinara_nishanovaa</a>
+            <a href="https://instagram.com/diademauz.official" target="_blank" rel="noopener" class="btn-glass !py-3 text-[11px]">@diademauz.official</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== ATELIER / CUSTOMIZER ===== -->
+    <section id="atelier" class="relative h-[260svh]" data-chapter="Konstruktor">
+      <span class="absolute top-[50svh] block h-px w-px" data-k="7" aria-hidden="true"></span>
+      <span class="absolute bottom-[50svh] block h-px w-px" data-k="7" aria-hidden="true"></span>
+      <div class="sticky top-0 h-[100svh] overflow-hidden">
+        <!-- drag stage: rotates the gown -->
+        <div id="stage" class="absolute inset-0 cursor-grab touch-pan-y active:cursor-grabbing" aria-label="Ko'ylakni aylantirish uchun suring"></div>
+        <div class="pointer-events-none absolute inset-x-0 top-24 text-center sm:top-28">
+          <p class="eyebrow">Interaktiv 3D Atelier</p>
+          <h2 class="mt-3 font-serif text-4xl font-light text-ivory sm:text-6xl">Ko'ylagingizni <em class="gold-text">yarating</em></h2>
+          <p class="mt-3 text-[11px] uppercase tracking-[0.3em] text-ivory/50"><span aria-hidden="true">⟲</span> Aylantirish uchun suring</p>
+        </div>
+
+        <div id="customizer" class="glass absolute inset-x-3 bottom-3 max-h-[46svh] overflow-y-auto sm:max-h-[calc(100svh-7rem)] rounded-[1.75rem] p-5 sm:inset-x-auto sm:bottom-auto sm:left-6 sm:top-1/2 sm:w-[21rem] sm:-translate-y-1/2 sm:p-7 lg:left-10">
+          <fieldset>
+            <legend class="opt-label">Siluet</legend>
+            <div class="mt-3 grid grid-cols-4 gap-1.5 sm:grid-cols-2" data-group="style">
+              <button type="button" class="opt" data-value="ball" aria-pressed="true">Malika</button>
+              <button type="button" class="opt" data-value="aline" aria-pressed="false">A-siluet</button>
+              <button type="button" class="opt" data-value="mermaid" aria-pressed="false">Rusalka</button>
+              <button type="button" class="opt" data-value="column" aria-pressed="false">Minimal</button>
+            </div>
+          </fieldset>
+          <fieldset class="mt-5">
+            <legend class="opt-label">Mato</legend>
+            <div class="mt-3 grid grid-cols-4 gap-1.5 sm:grid-cols-2" data-group="fabric">
+              <button type="button" class="opt" data-value="satin" aria-pressed="true">Atlas</button>
+              <button type="button" class="opt" data-value="mikado" aria-pressed="false">Mikado</button>
+              <button type="button" class="opt" data-value="tulle" aria-pressed="false">Tyul</button>
+              <button type="button" class="opt" data-value="lace" aria-pressed="false">Kruzheva</button>
+            </div>
+          </fieldset>
+          <fieldset class="mt-5">
+            <legend class="opt-label">Rang · <span id="colorName" class="normal-case tracking-normal text-ivory">Ivory</span></legend>
+            <div class="mt-3 flex flex-wrap gap-2.5" data-group="color">
+              <button type="button" class="swatch" data-value="ivory" data-name="Ivory" style="--c:#f4ebdc" aria-pressed="true" aria-label="Ivory"></button>
+              <button type="button" class="swatch" data-value="snow" data-name="Qordek oq" style="--c:#fbfaf6" aria-pressed="false" aria-label="Qordek oq"></button>
+              <button type="button" class="swatch" data-value="champagne" data-name="Shampan" style="--c:#ead2ac" aria-pressed="false" aria-label="Shampan"></button>
+              <button type="button" class="swatch" data-value="blush" data-name="Pudra" style="--c:#f0cdc4" aria-pressed="false" aria-label="Pudra"></button>
+              <button type="button" class="swatch" data-value="pearl" data-name="Marvarid" style="--c:#e2e0e6" aria-pressed="false" aria-label="Marvarid"></button>
+              <button type="button" class="swatch" data-value="gold" data-name="Oltin" style="--c:#d8bb84" aria-pressed="false" aria-label="Oltin"></button>
+            </div>
+          </fieldset>
+          <label class="mt-5 flex cursor-pointer items-center justify-between gap-4">
+            <span class="opt-label !mb-0">Swarovski kristallari</span>
+            <input id="crystals" type="checkbox" class="toggle" checked />
+          </label>
+          <button id="bookDesign" type="button" class="btn-gold mt-6 w-full">Shu obrazni band qilish</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIP BOOKING ===== -->
+    <section id="vip" class="panel flex min-h-[130svh] items-center py-28" data-k="8" data-chapter="VIP">
+      <div class="container-c grid items-center gap-10 lg:grid-cols-2">
+        <div class="reveal">
+          <p class="eyebrow">VIP Booking</p>
+          <h2 class="mt-4 font-serif text-5xl font-light leading-[0.95] text-ivory sm:text-7xl">Shaxsiy <em class="gold-text">primerka</em></h2>
+          <p class="mt-6 max-w-md leading-relaxed text-ivory/65">Salon faqat siz va yaqinlaringiz uchun yopiladi: shampan, shaxsiy stilist, 10 tagacha tanlangan ko'ylak va Dinaradan test-makiyaj.</p>
+          <ul class="mt-8 space-y-3 text-sm text-ivory/75">
+            <li class="flex gap-3"><span class="text-gold">✦</span>2 soatlik yopiq primerka</li>
+            <li class="flex gap-3"><span class="text-gold">✦</span>O'lchamga bepul moslashtirish</li>
+            <li class="flex gap-3"><span class="text-gold">✦</span>Makiyaj va soch turmagi bo'yicha konsultatsiya</li>
+          </ul>
+        </div>
+
+        <form id="vipForm" class="glass reveal grid gap-4 rounded-[2rem] p-6 sm:grid-cols-2 sm:p-9" novalidate>
+          <div><label for="vName" class="f-label">Ismingiz</label><input id="vName" name="name" class="f-input" autocomplete="name" placeholder="Madina" required /></div>
+          <div><label for="vPhone" class="f-label">Telefon</label><input id="vPhone" name="phone" type="tel" inputmode="tel" class="f-input" autocomplete="tel" placeholder="+998 __ ___ __ __" required /></div>
+          <div><label for="vDate" class="f-label">To'y sanasi</label><input id="vDate" name="date" type="date" class="f-input [color-scheme:dark]" /></div>
+          <div>
+            <label for="vPkg" class="f-label">Xizmat</label>
+            <select id="vPkg" name="pkg" class="f-input">
+              <option>VIP primerka</option>
+              <option>Diadema Royal paketi</option>
+              <option>Makiyaj + soch turmagi</option>
+              <option>Nikoh + To'y obrazlari</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="vDesign" class="f-label">Konstruktordagi obraz</label>
+            <input id="vDesign" name="design" class="f-input" readonly placeholder="Atelier'da ko'ylak tanlang" />
+          </div>
+          <div class="sm:col-span-2"><label for="vNote" class="f-label">Izoh</label><textarea id="vNote" name="note" rows="2" class="f-input resize-none" placeholder="Mehmonlar soni, istaklar…"></textarea></div>
+          <p id="vErr" class="hidden text-sm text-rose-300 sm:col-span-2" role="alert">Iltimos, ism va telefon raqamingizni kiriting.</p>
+          <div class="flex flex-col gap-3 sm:col-span-2 sm:flex-row">
+            <button type="submit" value="telegram" class="btn-gold flex-1">Telegram orqali</button>
+            <button type="submit" value="whatsapp" class="btn-glass flex-1">WhatsApp orqali</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="relative z-10 px-4 pb-10 sm:px-6">
+      <div class="glass mx-auto flex max-w-6xl flex-col gap-6 rounded-[2rem] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9">
+        <div>
+          <p class="font-serif text-3xl uppercase tracking-[0.35em] text-ivory">Diadema</p>
+          <p class="mt-2 text-sm text-ivory/50">Farg'ona, O'zbekiston · Har kuni 09:00–20:00</p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ivory/70">
+          <a class="hover:text-gold" href="https://instagram.com/diademauz.official" target="_blank" rel="noopener">@diademauz.official</a>
+          <a class="hover:text-gold" href="https://instagram.com/dinara_nishanovaa" target="_blank" rel="noopener">@dinara_nishanovaa</a>
+          <a class="hover:text-gold" data-link="telegram" href="https://t.me/diademauz" target="_blank" rel="noopener">Telegram</a>
+          <a class="hover:text-gold" data-link="phone" href="tel:+998900000000">+998 90 000 00 00</a>
+          <a class="hover:text-gold" href="../">Klassik sayt →</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

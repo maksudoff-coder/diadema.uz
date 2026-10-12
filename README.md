@@ -45,3 +45,28 @@ The site is plain static files. Upload the repo root (without `node_modules`) to
 
 ## Booking flow
 The form checks name and phone, then opens a Telegram chat (`t.me/<username>?text=…`) or WhatsApp (`wa.me/<phone>?text=…`) with a pre-filled request. The request includes the chosen dress or package from the catalog modal or package cards. For Telegram, the text is also copied to the clipboard, because some clients ignore `?text=`.
+
+---
+
+# 3D Cinematic Showroom (`/cinematic/`)
+
+An immersive, real-time WebGL experience: while you scroll, the camera flies through a virtual Diadema showroom past golden archways, gowns on pedestals, a floating tiara, Dinara's portrait and the atelier podium.
+
+| Requirement | Implementation |
+|---|---|
+| Three.js showroom | `cinematic/src/scene.js`: arch corridor with neon-gold trims, drapes, glossy floor, 4 procedural gowns on pedestals, crystal tiara, founder portrait, customizer podium, 2,600 shader-driven gold particles |
+| Scroll-linked camera | `cinematic/src/main.js`: any element with `data-k="n"` is a camera waypoint. One GSAP ScrollTrigger timeline is scrubbed over the full scroll length and moves the camera along Catmull-Rom position and look-at splines |
+| Post-processing | `EffectComposer`: Render → **Bokeh DOF** (focus follows the look-at target) → **Unreal Bloom** → Output → custom **film pass** (vignette, grain, chromatic aberration, warm grade) |
+| Glass UI + Lenis | Tailwind glass panels for Hero, Collection, Founder Story, Atelier and VIP Booking. Lenis is driven by `gsap.ticker` and synced with `ScrollTrigger.update` |
+| 3D customizer | `cinematic/src/dress.js`: lathe-built gown with pleats and a train. Drag to rotate (with inertia and idle auto-turn). Switch silhouette (Malika / A-siluet / Rusalka / Minimal), fabric (Atlas / Mikado / Tyul / Kruzheva lace) and 6 colours, and toggle the crystals. "Shu obrazni band qilish" copies the design into the VIP form |
+| VIP booking | Sends a pre-filled request via Telegram or WhatsApp. Edit `CONTACTS` at the top of `cinematic/src/main.js` |
+
+**Performance:** on phones and low-core devices it switches to a lighter mode: no DOF or shadows, fewer particles, lower pixel ratio. Rendering pauses in hidden tabs. `prefers-reduced-motion` turns off smooth scrolling. Without WebGL, the page falls back to a static gradient background.
+
+**Build:** sources live in `cinematic/src/`; the compiled `cinematic/assets/app.js` and `app.css` are committed. Three.js, GSAP and Lenis are bundled locally, so there are no CDN dependencies.
+```bash
+npm install
+npm run build:cinematic
+npm run serve:cinematic        # http://localhost:4173/cinematic/
+```
+On macOS you can also double-click `Launch Showroom.command`.
