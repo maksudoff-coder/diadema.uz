@@ -70,3 +70,10 @@ npm run build:cinematic
 npm run serve:cinematic        # http://localhost:4173/cinematic/
 ```
 On macOS you can also double-click `Launch Showroom.command`.
+
+## Deploy (Vercel)
+`vercel.json` skips installing and builds nothing: `scripts/dist.mjs` only copies the prebuilt files into `public/`:
+- `/` → 3D Cinematic Showroom
+- `/klassik/` → classic landing page (UZ/RU)
+
+Run `npm run build:all` before pushing if you changed any source files. Leave "Build Command" and "Output Directory" in Vercel Project Settings empty so `vercel.json` takes effect.

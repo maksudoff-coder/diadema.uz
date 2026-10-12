@@ -4,11 +4,28 @@
   "installCommand": "echo skip install",
   "buildCommand": "node scripts/dist.mjs",
   "outputDirectory": "public",
-  "cleanUrls": true,
   "headers": [
     {
       "source": "/(.*)\\.(js|css|svg)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/cinematic",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/cinematic/",
+      "destination": "/",
+      "permanent": false
     }
   ]
 }
